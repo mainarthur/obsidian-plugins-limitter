@@ -32,7 +32,7 @@ export const t = (key: keyof typeof en, vars?: { [k: string]: string | number })
 
 	if (vars) {
 		for (const v in vars) {
-			text = text.replace(`{{${v}}}`, vars[v].toString());
+			text = text.replace(`{{${v}}}`, (vars[v] as string | number).toString());
 		}
 	}
 

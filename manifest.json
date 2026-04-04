@@ -6,6 +6,5 @@
 	"description": "Limits the number of installed plugins based on your vault file count to keep you focused",
 	"author": "Arthur Kh",
 	"authorUrl": "https://github.com/mainarthur",
-	"fundingUrl": "https://github.com/mainarthur",
 	"isDesktopOnly": false
 }
