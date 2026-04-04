@@ -1,9 +1,9 @@
 {
-	"id": "obsidian-plugins-limitter",
+	"id": "plugins-limitter",
 	"name": "Plugins Limitter",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "Limits the number of installed plugins based on your vault file count to keep you focused",
+	"description": "Limits the number of installed plugins based on your vault file count to keep you focused.",
 	"author": "Arthur Kh",
 	"authorUrl": "https://github.com/mainarthur",
 	"isDesktopOnly": false
