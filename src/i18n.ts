@@ -21,14 +21,14 @@ import nl from "./locale/nl.json";
 import cs from "./locale/cs.json";
 import hi from "./locale/hi.json";
 
-const localeMap: { [k: string]: any } = {
+const localeMap: { [k: string]: unknown } = {
 	en, de, es, fr, it, ja, ko, pt, ru, zh, ar, id, tr, pl, uk, vi, th, nl, cs, hi
 };
 
 const locale = moment.locale();
 export const t = (key: keyof typeof en, vars?: { [k: string]: string | number }): string => {
 	const currentLocale = localeMap[locale] || localeMap[locale.substring(0, 2)] || en;
-	let text = (currentLocale as any)[key] || (en as any)[key] || key;
+	let text = (currentLocale as Record<string, string>)[key] || (en as Record<string, string>)[key] || key;
 
 	if (vars) {
 		for (const v in vars) {

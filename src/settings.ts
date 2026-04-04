@@ -14,10 +14,10 @@ export class ObsidianPluginsSettingTab extends PluginSettingTab {
 		const { containerEl } = this;
 		containerEl.empty();
 
-		containerEl.createEl('h2', { text: t('STATS_TITLE') });
+		new Setting(containerEl).setName(t('STATS_TITLE')).setHeading();
 
 		const filesCount = this.app.vault.getFiles().length;
-		const pluginsCount = Object.keys((this.app as any).plugins?.manifests || {}).length;
+		const pluginsCount = Object.keys((this.app as App & { plugins?: { manifests?: Record<string, unknown> } }).plugins?.manifests || {}).length;
 		const limit = 5 + Math.floor(filesCount / 10);
 		const remaining = limit - pluginsCount;
 		const nextMilestone = 10 - (filesCount % 10);
@@ -49,14 +49,14 @@ export class ObsidianPluginsSettingTab extends PluginSettingTab {
 		const quotaEl = containerEl.createEl('div', { cls: 'setting-item-description' });
 		if (remaining > 0) {
 			quotaEl.setText(t('QUOTA_SUCCESS', { remaining }));
-			quotaEl.style.color = 'var(--text-success)';
+			quotaEl.setCssProps({ color: 'var(--text-success)' });
 		} else {
 			quotaEl.setText(t('QUOTA_ERROR', { nextMilestone }));
-			quotaEl.style.color = 'var(--text-error)';
+			quotaEl.setCssProps({ color: 'var(--text-error)' });
 		}
 
 		containerEl.createEl('br');
-		containerEl.createEl('p', { 
+		containerEl.createEl('p', {
 			text: t('FOOTER_MSG', { nextMilestone }),
 			cls: 'setting-item-description'
 		});

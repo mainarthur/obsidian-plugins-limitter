@@ -1,4 +1,4 @@
-import { Plugin } from 'obsidian';
+import { Plugin, App } from 'obsidian';
 import { ObsidianPluginsSettingTab } from './settings';
 import { t } from './i18n';
 
@@ -23,11 +23,11 @@ export default class ObsidianPluginsLimitter extends Plugin {
 		document.querySelectorAll('button[data-plugins-disabled]').forEach(btn => {
 			btn.removeAttribute('disabled');
 			btn.removeAttribute('data-plugins-disabled');
-			
+
 			const originalTitle = btn.getAttribute('data-original-title') || '';
 			btn.setAttribute('aria-label', originalTitle);
 			btn.setAttribute('title', originalTitle);
-			
+
 			const originalText = btn.getAttribute('data-original-text') || '';
 			if (originalText) {
 				btn.textContent = originalText;
@@ -44,7 +44,7 @@ export default class ObsidianPluginsLimitter extends Plugin {
 	checkPluginsLimit() {
 		const filesCount = this.app.vault.getFiles().length;
 		// Count all installed community plugins
-		const pluginsCount = Object.keys((this.app as any).plugins?.manifests || {}).length;
+		const pluginsCount = Object.keys((this.app as App & { plugins?: { manifests?: Record<string, unknown> } }).plugins?.manifests || {}).length;
 		const limit = 5 + Math.floor(filesCount / 10);
 		const limitReached = pluginsCount >= limit;
 
