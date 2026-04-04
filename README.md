@@ -1,11 +1,12 @@
-# Obsidian Plugins Limitter
+# Plugins Limitter (for Obsidian)
 
 A minimalist Obsidian plugin designed to help you stay focused on writing and creating content, rather than constantly tinkering with new plugins.
+
 
 ## Motivation
 Obsidian is an incredibly powerful tool with a vibrant community plugin ecosystem. However, it's very easy to fall into the trap of "productivity procrastination" — endlessly browsing, installing, and configuring plugins instead of actually thinking and writing.
 
-The **Obsidian Plugins Limitter** gently enforces a limit on the number of community plugins you can install. It gamifies your plugin usage: to earn the right to install another tool, you first have to produce more notes!
+The **Plugins Limitter** gently enforces a limit on the number of community plugins you can install. It gamifies your plugin usage: to earn the right to install another tool, you first have to produce more notes!
 
 ## How It Works
 The plugin tracks the total number of files in your Obsidian Vault and determines your maximum plugin allowance based on that number. If you reach your limit, the "Browse" button in the Community Plugins settings and the "Install" button in the plugin browser will be temporarily disabled until you create more files.
@@ -50,6 +51,16 @@ Once installed and enabled, the plugin works entirely in the background.
 2. When you attempt to browse or install new community plugins in your Settings, the plugin will check your file count vs. your installed plugin count.
 3. If you are under the limit, you can install plugins as usual.
 4. If you have hit the ceiling, the install buttons will grey out, prompting you to go write more notes!
+
+## Screenshots
+
+### Dashboard in the settings
+
+![Preview 1](image.png)
+
+### The blocking message
+
+![Preview 2](image-1.png)
 
 ## License
 MIT

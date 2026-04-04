@@ -1,5 +1,5 @@
 {
-	"name": "obsidian-plugins-limitter",
+	"name": "plugins-limitter",
 	"version": "1.0.0",
 	"description": "Limits the number of installed plugins based on your vault file count to keep you focused",
 	"main": "main.js",
