@@ -1,0 +1,14 @@
+{
+	"LIMIT_MSG": "プラグインの生産的な数に達しました。さらにObsidianを使用して、より多くのプラグインをインストールできるようにロックを解除してください。",
+	"STATS_TITLE": "プラグイン制限の統計",
+	"FILE_COUNT_LABEL": "現在のファイル数",
+	"FILE_COUNT_DESC": "保管庫内のファイルの総数。",
+	"PLUGINS_COUNT_LABEL": "インストール済みのコミュニティプラグイン",
+	"PLUGINS_COUNT_DESC": "現在インストールされているプラグインの数。",
+	"ALLOWANCE_LABEL": "現在のプラグイン許容数",
+	"ALLOWANCE_DESC": "ファイル数に基づいた最大許容プラグイン数。",
+	"QUOTA_SUCCESS": "あと {{remaining}} 個のプラグインをインストールできます。",
+	"QUOTA_ERROR": "上限に達しました。あと {{nextMilestone}} 個のファイルを作成して、新しいスロットをアンロックしてください。",
+	"FOOTER_MSG": "書き続けてください！10個のファイルごとに1つのプラグインスロットが追加されます。次のスロットまであと：{{nextMilestone}} ファイル。",
+	"LIMIT_REACHED_BTN": "上限に達しました!"
+}

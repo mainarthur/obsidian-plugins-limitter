@@ -1,0 +1,14 @@
+{
+	"LIMIT_MSG": "You've reached the productive number of plugins, use Obsidian more to unlock the ability to install more plugins.",
+	"STATS_TITLE": "Plugin Limitation Stats",
+	"FILE_COUNT_LABEL": "Current File Count",
+	"FILE_COUNT_DESC": "Total number of files in your vault.",
+	"PLUGINS_COUNT_LABEL": "Installed Community Plugins",
+	"PLUGINS_COUNT_DESC": "Current count of installed plugins.",
+	"ALLOWANCE_LABEL": "Current Plugin Allowance",
+	"ALLOWANCE_DESC": "Your maximum allowed plugins based on file count.",
+	"QUOTA_SUCCESS": "You can install {{remaining}} more plugin(s).",
+	"QUOTA_ERROR": "You've reached your limit. Write {{nextMilestone}} more file(s) to unlock a new slot.",
+	"FOOTER_MSG": "Keep writing! Every 10 files gives you 1 more plugin slot. Next slot in: {{nextMilestone}} files.",
+	"LIMIT_REACHED_BTN": "Limit reached!"
+}

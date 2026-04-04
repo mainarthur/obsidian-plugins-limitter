@@ -1,0 +1,14 @@
+{
+	"LIMIT_MSG": "Du hast die produktive Anzahl an Plugins erreicht. Nutze Obsidian mehr, um die Möglichkeit zur Installation weiterer Plugins freizuschalten.",
+	"STATS_TITLE": "Plugin-Beschränkungsstatistik",
+	"FILE_COUNT_LABEL": "Aktuelle Dateianzahl",
+	"FILE_COUNT_DESC": "Gesamtzahl der Dateien in Ihrem Vault.",
+	"PLUGINS_COUNT_LABEL": "Installierte Community-Plugins",
+	"PLUGINS_COUNT_DESC": "Aktuelle Anzahl der installierten Plugins.",
+	"ALLOWANCE_LABEL": "Aktuelles Plugin-Kontingent",
+	"ALLOWANCE_DESC": "Ihre maximal zulässigen Plugins basierend auf der Dateianzahl.",
+	"QUOTA_SUCCESS": "Sie können {{remaining}} weitere(s) Plugin(s) installieren.",
+	"QUOTA_ERROR": "Du hast dein Limit erreicht. Schreibe {{nextMilestone}} weitere Datei(en), um einen neuen Slot freizuschalten.",
+	"FOOTER_MSG": "Schreibe weiter! Alle 10 Dateien erhältst du einen weiteren Plugin-Slot. Nächster Slot in: {{nextMilestone}} Dateien.",
+	"LIMIT_REACHED_BTN": "Limit erreicht!"
+}

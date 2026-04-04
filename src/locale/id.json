@@ -1,0 +1,14 @@
+{
+	"LIMIT_MSG": "Anda telah mencapai jumlah plugin yang produktif, gunakan Obsidian lebih banyak untuk membuka kemampuan menginstal lebih banyak plugin.",
+	"STATS_TITLE": "Statistik Batasan Plugin",
+	"FILE_COUNT_LABEL": "Jumlah File Saat Ini",
+	"FILE_COUNT_DESC": "Total jumlah file di vault Anda.",
+	"PLUGINS_COUNT_LABEL": "Plugin Komunitas Terpasang",
+	"PLUGINS_COUNT_DESC": "Jumlah plugin yang terpasang saat ini.",
+	"ALLOWANCE_LABEL": "Kuota Plugin Saat Ini",
+	"ALLOWANCE_DESC": "Maksimum plugin yang diizinkan berdasarkan jumlah file.",
+	"QUOTA_SUCCESS": "Anda dapat menginstal {{remaining}} plugin lagi.",
+	"QUOTA_ERROR": "Anda telah mencapai batas. Tulis {{nextMilestone}} file lagi untuk membuka slot baru.",
+	"FOOTER_MSG": "Teruslah menulis! Setiap 10 file memberi Anda 1 slot plugin tambahan. Slot berikutnya dalam: {{nextMilestone}} file.",
+	"LIMIT_REACHED_BTN": "Batas tercapai!"
+}

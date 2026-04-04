@@ -1,0 +1,14 @@
+{
+	"LIMIT_MSG": "Üretken eklenti sayısına ulaştınız, daha fazla eklenti yükleme özelliğini açmak için Obsidian'ı daha fazla kullanın.",
+	"STATS_TITLE": "Eklenti Sınırlama İstatistikleri",
+	"FILE_COUNT_LABEL": "Güncel Dosya Sayısı",
+	"FILE_COUNT_DESC": "Kasanızdaki toplam dosya sayısı.",
+	"PLUGINS_COUNT_LABEL": "Yüklü Topluluk Eklentileri",
+	"PLUGINS_COUNT_DESC": "Şu anda yüklü olan eklenti sayısı.",
+	"ALLOWANCE_LABEL": "Güncel Eklenti İzni",
+	"ALLOWANCE_DESC": "Dosya sayısına göre izin verilen maksimum eklenti sayısı.",
+	"QUOTA_SUCCESS": "{{remaining}} eklenti daha yükleyebilirsiniz.",
+	"QUOTA_ERROR": "Sınıra ulaştınız. Yeni bir slot açmak için {{nextMilestone}} dosya daha yazın.",
+	"FOOTER_MSG": "Yazmaya devam edin! Her 10 dosya size 1 eklenti slotu daha kazandırır. Bir sonraki slot: {{nextMilestone}} dosya sonra.",
+	"LIMIT_REACHED_BTN": "Sınıra ulaşıldı!"
+}

@@ -1,0 +1,14 @@
+{
+	"LIMIT_MSG": "Dosáhli jste produktivního počtu doplňků, používejte Obsidian více, abyste odemkli možnost instalace dalších doplňků.",
+	"STATS_TITLE": "Statistiky omezení doplňků",
+	"FILE_COUNT_LABEL": "Aktuální počet souborů",
+	"FILE_COUNT_DESC": "Celkový počet souborů ve vašem trezoru.",
+	"PLUGINS_COUNT_LABEL": "Nainstalované komunitní doplňky",
+	"PLUGINS_COUNT_DESC": "Aktuální počet nainstalovaných doplňků.",
+	"ALLOWANCE_LABEL": "Aktuální kvóta doplňků",
+	"ALLOWANCE_DESC": "Váš maximální povolený počet doplňků na základě počtu souborů.",
+	"QUOTA_SUCCESS": "Můžete nainstalovat ještě {{remaining}} doplňků.",
+	"QUOTA_ERROR": "Dosáhli jste svého limitu. Napište ještě {{nextMilestone}} souborů pro odemknutí nového slotu.",
+	"FOOTER_MSG": "Pište dál! Každých 10 souborů vám dává 1 další slot pro doplňky. Další slot za: {{nextMilestone}} souborů.",
+	"LIMIT_REACHED_BTN": "Limit dosažen!"
+}

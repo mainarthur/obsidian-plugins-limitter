@@ -1,0 +1,14 @@
+{
+	"LIMIT_MSG": "Vous avez atteint le nombre productif de plugins, utilisez davantage Obsidian pour débloquer la possibilité d'installer plus de plugins.",
+	"STATS_TITLE": "Statistiques de limitation des plugins",
+	"FILE_COUNT_LABEL": "Nombre de fichiers actuel",
+	"FILE_COUNT_DESC": "Nombre total de fichiers dans votre coffre.",
+	"PLUGINS_COUNT_LABEL": "Plugins de la communauté installés",
+	"PLUGINS_COUNT_DESC": "Nombre actuel de plugins installés.",
+	"ALLOWANCE_LABEL": "Indemnité de plugin actuelle",
+	"ALLOWANCE_DESC": "Votre nombre maximum de plugins autorisés basé sur le nombre de fichiers.",
+	"QUOTA_SUCCESS": "Vous pouvez installer {{remaining}} plugin(s) supplémentaire(s).",
+	"QUOTA_ERROR": "Vous avez atteint votre limite. Écrivez encore {{nextMilestone}} fichier(s) pour débloquer un nouvel emplacement.",
+	"FOOTER_MSG": "Continuez à écrire ! Tous les 10 fichiers, vous gagnez 1 emplacement de plugin supplémentaire. Prochain emplacement dans : {{nextMilestone}} fichiers.",
+	"LIMIT_REACHED_BTN": "Limite atteinte !"
+}

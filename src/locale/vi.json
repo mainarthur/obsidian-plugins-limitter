@@ -1,0 +1,14 @@
+{
+	"LIMIT_MSG": "Bạn đã đạt đến số lượng plugin hiệu quả, hãy sử dụng Obsidian nhiều hơn để mở khóa khả năng cài đặt thêm plugin.",
+	"STATS_TITLE": "Thống kê giới hạn Plugin",
+	"FILE_COUNT_LABEL": "Số lượng tệp hiện tại",
+	"FILE_COUNT_DESC": "Tổng số tệp trong kho của bạn.",
+	"PLUGINS_COUNT_LABEL": "Plugin cộng đồng đã cài đặt",
+	"PLUGINS_COUNT_DESC": "Số lượng plugin hiện đang được cài đặt.",
+	"ALLOWANCE_LABEL": "Hạn mức Plugin hiện tại",
+	"ALLOWANCE_DESC": "Số lượng plugin tối đa được phép dựa trên số lượng tệp.",
+	"QUOTA_SUCCESS": "Bạn có thể cài đặt thêm {{remaining}} plugin.",
+	"QUOTA_ERROR": "Bạn đã đạt đến giới hạn. Viết thêm {{nextMilestone}} tệp nữa để mở khóa một vị trí mới.",
+	"FOOTER_MSG": "Hãy tiếp tục viết! Cứ sau 10 tệp, bạn sẽ có thêm 1 vị trí plugin. Vị trí tiếp theo trong: {{nextMilestone}} tệp nữa.",
+	"LIMIT_REACHED_BTN": "Đã đạt giới hạn!"
+}

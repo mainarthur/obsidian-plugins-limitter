@@ -1,0 +1,14 @@
+{
+	"LIMIT_MSG": "Je hebt het productieve aantal plugins bereikt, gebruik Obsidian meer om de mogelijkheid vrij te spelen om meer plugins te installeren.",
+	"STATS_TITLE": "Plugin Beperkingsstatistieken",
+	"FILE_COUNT_LABEL": "Huidig aantal bestanden",
+	"FILE_COUNT_DESC": "Totaal aantal bestanden in je vault.",
+	"PLUGINS_COUNT_LABEL": "Geïnstalleerde community-plugins",
+	"PLUGINS_COUNT_DESC": "Huidig aantal geïnstalleerde plugins.",
+	"ALLOWANCE_LABEL": "Huidig plugin-quotum",
+	"ALLOWANCE_DESC": "Je maximaal toegestane aantal plugins op basis van het aantal bestanden.",
+	"QUOTA_SUCCESS": "Je kunt nog {{remaining}} plugin(s) installeren.",
+	"QUOTA_ERROR": "Je hebt je limiet bereikt. Schrijf nog {{nextMilestone}} bestand(en) om een nieuw slot vrij te spelen.",
+	"FOOTER_MSG": "Blijf schrijven! Elke 10 bestanden geven je 1 extra plugin-slot. Volgende slot in: {{nextMilestone}} bestanden.",
+	"LIMIT_REACHED_BTN": "Limiet bereikt!"
+}

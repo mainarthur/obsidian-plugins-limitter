@@ -1,0 +1,14 @@
+{
+	"LIMIT_MSG": "Osiągnąłeś produktywną liczbę wtyczek, używaj Obsidian częściej, aby odblokować możliwość instalacji kolejnych wtyczek.",
+	"STATS_TITLE": "Statystyki ograniczeń wtyczek",
+	"FILE_COUNT_LABEL": "Aktualna liczba plików",
+	"FILE_COUNT_DESC": "Całkowita liczba plików w twoim sejfie.",
+	"PLUGINS_COUNT_LABEL": "Zainstalowane wtyczki społeczności",
+	"PLUGINS_COUNT_DESC": "Aktualna liczba zainstalowanych wtyczek.",
+	"ALLOWANCE_LABEL": "Aktualny limit wtyczek",
+	"ALLOWANCE_DESC": "Maksymalna liczba dozwolonych wtyczek na podstawie liczby plików.",
+	"QUOTA_SUCCESS": "Możesz zainstalować jeszcze {{remaining}} wtyczek.",
+	"QUOTA_ERROR": "Osiągnąłeś limit. Napisz jeszcze {{nextMilestone}} plików, aby odblokować nowe miejsce.",
+	"FOOTER_MSG": "Pisz dalej! Każde 10 plików to 1 dodatkowe miejsce na wtyczkę. Następne miejsce za: {{nextMilestone}} plików.",
+	"LIMIT_REACHED_BTN": "Osiągnięto limit!"
+}

@@ -1,0 +1,14 @@
+{
+	"LIMIT_MSG": "您已达到高效插件数量限制。请更多地使用 Obsidian 以解锁安装更多插件的能力。",
+	"STATS_TITLE": "插件限制统计",
+	"FILE_COUNT_LABEL": "当前文件数量",
+	"FILE_COUNT_DESC": "您的库中的文件总数。",
+	"PLUGINS_COUNT_LABEL": "已安装的社区插件",
+	"PLUGINS_COUNT_DESC": "当前已安装插件的数量。",
+	"ALLOWANCE_LABEL": "当前插件额度",
+	"ALLOWANCE_DESC": "根据文件数量计算的最大允许插件数。",
+	"QUOTA_SUCCESS": "您还可以安装 {{remaining}} 个插件。",
+	"QUOTA_ERROR": "您已达到限制。撰写 {{nextMilestone}} 个新文件即可解锁一个新槽位。",
+	"FOOTER_MSG": "继续写作！每 10 个文件即可获得 1 个插件槽位。下一个槽位还需：{{nextMilestone}} 个文件。",
+	"LIMIT_REACHED_BTN": "达到上限!"
+}
