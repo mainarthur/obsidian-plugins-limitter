@@ -52,4 +52,4 @@ Once installed and enabled, the plugin works entirely in the background.
 4. If you have hit the ceiling, the install buttons will grey out, prompting you to go write more notes!
 
 ## License
-0-BSD
+MIT
