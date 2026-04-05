@@ -4,7 +4,7 @@ import { t } from './i18n';
 
 export default class ObsidianPluginsLimitter extends Plugin {
 
-	async onload() {
+	onload() {
 		// Run it initially after layout is ready
 		this.app.workspace.onLayoutReady(() => {
 			this.checkPluginsLimit();
