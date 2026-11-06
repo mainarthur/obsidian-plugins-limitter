@@ -1,5 +1,5 @@
 {
-	"id": "installation-limitter",
+	"id": "plugins-limitter",
 	"name": "Installation Limitter",
 	"version": "1.0.2",
 	"minAppVersion": "0.15.0",
