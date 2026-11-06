@@ -1,7 +1,7 @@
 {
 	"id": "installation-limitter",
 	"name": "Installation Limitter",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"minAppVersion": "0.15.0",
 	"description": "Limits the number of installed plugins based on your vault file count to keep you focused.",
 	"author": "Arthur Kh",
