@@ -20,7 +20,7 @@ export default class ObsidianPluginsLimitter extends Plugin {
 
 	onunload() {
 		// Restore any disabled buttons
-		document.querySelectorAll('button[data-plugins-disabled]').forEach(btn => {
+		activeDocument.querySelectorAll('button[data-plugins-disabled]').forEach(btn => {
 			btn.removeAttribute('disabled');
 			btn.removeAttribute('data-plugins-disabled');
 
@@ -38,7 +38,7 @@ export default class ObsidianPluginsLimitter extends Plugin {
 				btn.removeAttribute('title');
 			}
 		});
-		document.body.classList.remove('obsidian-plugins-limit-reached');
+		activeDocument.body.classList.remove('obsidian-plugins-limit-reached');
 	}
 
 	checkPluginsLimit() {
@@ -49,9 +49,9 @@ export default class ObsidianPluginsLimitter extends Plugin {
 		const limitReached = pluginsCount >= limit;
 
 		// Add a class for potential CSS styling
-		document.body.classList.toggle('obsidian-plugins-limit-reached', limitReached);
+		activeDocument.body.classList.toggle('obsidian-plugins-limit-reached', limitReached);
 
-		const buttons = document.querySelectorAll('button');
+		const buttons = activeDocument.querySelectorAll('button');
 		buttons.forEach(btn => {
 			// Find "Browse" button in settings. 
 			const isBrowseBtn = btn.getAttribute('aria-label') === "Browse community plugins" ||

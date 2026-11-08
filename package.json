@@ -1,6 +1,6 @@
 {
 	"name": "plugins-limitter",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"description": "Limits the number of installed plugins based on your vault file count to keep you focused",
 	"main": "main.js",
 	"type": "module",
@@ -13,17 +13,20 @@
 	"keywords": [],
 	"license": "0-BSD",
 	"devDependencies": {
-		"@types/node": "^16.11.6",
+		"@eslint/js": "9.30.1",
+		"@types/node": "^26.6.6",
 		"esbuild": "0.25.5",
-		"eslint-plugin-obsidianmd": "0.1.9",
+		"eslint-plugin-obsidianmd": "^0.5.1",
 		"globals": "14.0.0",
+		"jiti": "2.6.1",
 		"tslib": "2.4.0",
 		"typescript": "^5.8.3",
-		"typescript-eslint": "8.35.1",
-		"@eslint/js": "9.30.1",
-		"jiti": "2.6.1"
+		"typescript-eslint": "8.35.1"
 	},
 	"dependencies": {
 		"obsidian": "latest"
+	},
+	"overrides": {
+		"moment": "^2.31.0"
 	}
 }
