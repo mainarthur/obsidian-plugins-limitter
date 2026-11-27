@@ -33,8 +33,8 @@ Your plugin limit is calculated using the following straightforward formula:
 ### Manual Installation (Local Testing)
 1. Download the latest release from the [Releases](https://github.com/mainarthur/obsidian-plugins-limitter/releases) page (if available), or build it from source.
 2. In your Obsidian vault, navigate to `.obsidian/plugins/`.
-3. Create a new folder named `plugins-limitter`.
-4. Copy the `main.js` and `manifest.json` files into this folder.
+3. Create a new folder named `plugins-limitter`. The folder name must match the `id` in `manifest.json` (see the [Obsidian manifest docs](https://docs.obsidian.md/Reference/Manifest)).
+4. Copy the `main.js`, `manifest.json` and `styles.css` files into this folder.
 5. Restart Obsidian or reload your plugins.
 6. Go to **Settings** → **Community plugins** and enable "Installation Limitter".
 
@@ -43,7 +43,7 @@ Your plugin limit is calculated using the following straightforward formula:
 2. Open a terminal in the cloned directory.
 3. Run `npm install` to install dependencies.
 4. Run `npm run build` to compile the plugin.
-5. Copy the generated `main.js` and `manifest.json` to your vault's `.obsidian/plugins/plugins-limitter/` directory.
+5. Copy the generated `main.js`, `manifest.json` and `styles.css` to your vault's `.obsidian/plugins/plugins-limitter/` directory. The folder name must match the `id` in `manifest.json` ([Obsidian manifest docs](https://docs.obsidian.md/Reference/Manifest)).
 
 ## Usage
 Once installed and enabled, the plugin works entirely in the background. 
@@ -52,15 +52,31 @@ Once installed and enabled, the plugin works entirely in the background.
 3. If you are under the limit, you can install plugins as usual.
 4. If you have hit the ceiling, the install buttons will grey out, prompting you to go write more notes!
 
+Disabled plugins still count toward the limit, since they stay installed. Open **Settings → Installation Limitter** to see how many slots you use, how many files until the next slot, and which disabled plugins still take one.
+
 ## Screenshots
 
 ### Dashboard in the settings
 
-![Preview 1](image.png)
+The color of the slots bar shows where you stand.
+
+**Green: slots are free.** You can install more plugins.
+
+![Dashboard with 4 free slots](docs/screenshots/dashboard-green.png)
+
+**Yellow: every slot is used.** Write more notes to earn the next slot.
+
+![Dashboard with all slots used](docs/screenshots/dashboard-yellow.png)
+
+**Red: over the limit.** You have more plugins installed than your vault allows, for example after deleting notes or installing plugins before you enabled Installation Limitter. Write more notes or uninstall plugins to get back under it.
+
+![Dashboard with 2 plugins over the limit](docs/screenshots/dashboard-red.png)
 
 ### The blocking message
 
-![Preview 2](image-1.png)
+When you are at or over the limit, the **Browse** button in **Settings → Community plugins** turns into a disabled **Limit reached!** button.
+
+![Community plugins settings with the Browse button replaced by a disabled Limit reached! button](docs/screenshots/limit-reached.png)
 
 ## License
 MIT
