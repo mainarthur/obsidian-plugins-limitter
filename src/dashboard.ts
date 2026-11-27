@@ -25,7 +25,7 @@ export function dashboardKey(app: App, quota: Quota): string {
 	const plugins = Object.keys(getManifests(app))
 		.sort()
 		.map(id => (enabled.has(id) ? `+${id}` : `-${id}`));
-	return `${quota.filesCount}|${plugins.join(',')}`;
+	return `${String(quota.filesCount)}|${plugins.join(',')}`;
 }
 
 // Rows render nothing in controlEl, so Obsidian hides it and the info column
@@ -53,7 +53,7 @@ function addBar(setting: Setting, value: number, max: number, tone?: Tone) {
 			'aria-valuenow': value,
 		},
 	});
-	bar.setCssProps({ '--plugins-limitter-fill': `${Math.round((value / max) * 100)}%` });
+	bar.setCssProps({ '--plugins-limitter-fill': `${String(Math.round((value / max) * 100))}%` });
 	if (tone) {
 		bar.addClass(`mod-${tone}`);
 	}

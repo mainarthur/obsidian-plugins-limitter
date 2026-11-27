@@ -21,18 +21,19 @@ import nl from "./locale/nl.json";
 import cs from "./locale/cs.json";
 import hi from "./locale/hi.json";
 
-const localeMap: { [k: string]: unknown } = {
+const localeMap: Record<string, Partial<Record<string, string>>> = {
 	en, de, es, fr, it, ja, ko, pt, ru, zh, ar, id, tr, pl, uk, vi, th, nl, cs, hi
 };
 
 const locale = moment.locale();
-export const t = (key: keyof typeof en, vars?: { [k: string]: string | number }): string => {
-	const currentLocale = localeMap[locale] || localeMap[locale.substring(0, 2)] || en;
-	let text = (currentLocale as Record<string, string>)[key] || (en as Record<string, string>)[key] || key;
+export const t = (key: keyof typeof en, vars?: Record<string, string | number>): string => {
+	const currentLocale = localeMap[locale] ?? localeMap[locale.substring(0, 2)] ?? en;
+	const rawText = currentLocale[key];
+	let text = rawText !== undefined && rawText.length > 0 ? rawText : en[key];
 
 	if (vars) {
-		for (const v in vars) {
-			text = text.replace(`{{${v}}}`, (vars[v] as string | number).toString());
+		for (const [v, value] of Object.entries(vars)) {
+			text = text.replace(`{{${v}}}`, String(value));
 		}
 	}
 

@@ -16,7 +16,9 @@ export default class ObsidianPluginsLimitter extends Plugin {
 
 		// Check every 1 second continuously to catch modals and settings tabs being opened
 		this.registerInterval(
-			window.setInterval(() => this.checkPluginsLimit(), 1000)
+			window.setInterval(() => {
+				this.checkPluginsLimit();
+			}, 1000)
 		);
 
 		this.addSettingTab(this.settingTab);
@@ -25,24 +27,28 @@ export default class ObsidianPluginsLimitter extends Plugin {
 	onunload() {
 		// Restore any disabled buttons
 		activeDocument.querySelectorAll('button[data-plugins-disabled]').forEach(btn => {
-			btn.removeAttribute('disabled');
-			btn.removeAttribute('data-plugins-disabled');
-
-			const originalTitle = btn.getAttribute('data-original-title') || '';
-			btn.setAttribute('aria-label', originalTitle);
-			btn.setAttribute('title', originalTitle);
-
-			const originalText = btn.getAttribute('data-original-text') || '';
-			if (originalText) {
-				btn.textContent = originalText;
-			}
-
-			if (!originalTitle) {
-				btn.removeAttribute('aria-label');
-				btn.removeAttribute('title');
-			}
+			this.restoreButton(btn);
 		});
 		activeDocument.body.classList.remove('obsidian-plugins-limit-reached');
+	}
+
+	private restoreButton(btn: Element): void {
+		btn.removeAttribute('disabled');
+		btn.removeAttribute('data-plugins-disabled');
+
+		const originalTitle = btn.getAttribute('data-original-title') ?? '';
+		btn.setAttribute('aria-label', originalTitle);
+		btn.setAttribute('title', originalTitle);
+
+		const originalText = btn.getAttribute('data-original-text') ?? '';
+		if (originalText) {
+			btn.textContent = originalText;
+		}
+
+		if (!originalTitle) {
+			btn.removeAttribute('aria-label');
+			btn.removeAttribute('title');
+		}
 	}
 
 	checkPluginsLimit() {
@@ -70,7 +76,8 @@ export default class ObsidianPluginsLimitter extends Plugin {
 						btn.setAttribute('disabled', 'true');
 						btn.setAttribute('data-plugins-disabled', 'true');
 
-						const originalTitle = btn.getAttribute('aria-label') || btn.title || '';
+						const ariaLabel = btn.getAttribute('aria-label');
+						const originalTitle = ariaLabel !== null && ariaLabel.length > 0 ? ariaLabel : btn.title;
 						if (!btn.hasAttribute('data-original-title')) {
 							btn.setAttribute('data-original-title', originalTitle);
 						}
@@ -79,31 +86,14 @@ export default class ObsidianPluginsLimitter extends Plugin {
 						btn.setAttribute('aria-label', msg);
 						btn.setAttribute('title', msg);
 
-						const originalText = btn.textContent || "";
+						const originalText = btn.textContent ?? '';
 						if (!btn.hasAttribute('data-original-text')) {
 							btn.setAttribute('data-original-text', originalText);
 						}
 						btn.textContent = t('LIMIT_REACHED_BTN');
 					}
-				} else {
-					if (btn.hasAttribute('data-plugins-disabled')) {
-						btn.removeAttribute('disabled');
-						btn.removeAttribute('data-plugins-disabled');
-
-						const originalTitle = btn.getAttribute('data-original-title') || '';
-						btn.setAttribute('aria-label', originalTitle);
-						btn.setAttribute('title', originalTitle);
-
-						const originalText = btn.getAttribute('data-original-text') || '';
-						if (originalText) {
-							btn.textContent = originalText;
-						}
-
-						if (!originalTitle) {
-							btn.removeAttribute('aria-label');
-							btn.removeAttribute('title');
-						}
-					}
+				} else if (btn.hasAttribute('data-plugins-disabled')) {
+					this.restoreButton(btn);
 				}
 			}
 		});

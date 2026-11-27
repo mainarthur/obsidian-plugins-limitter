@@ -27,10 +27,7 @@ export class ObsidianPluginsSettingTab extends PluginSettingTab {
 	// Rebuild them whenever files or plugins changed; an open tab re-renders live.
 	refreshIfChanged(quota: Quota): void {
 		// Older versions call display() on every open, so they're always fresh
-		if (!requireApiVersion('1.13.0')) {
-			return;
-		}
-		if (dashboardKey(this.app, quota) !== this.builtFrom) {
+		if (requireApiVersion('1.13.0') && dashboardKey(this.app, quota) !== this.builtFrom) {
 			this.update();
 		}
 	}
