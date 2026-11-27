@@ -32,8 +32,11 @@ export const t = (key: keyof typeof en, vars?: Record<string, string | number>):
 	let text = rawText !== undefined && rawText.length > 0 ? rawText : en[key];
 
 	if (vars) {
-		for (const [v, value] of Object.entries(vars)) {
-			text = text.replace(`{{${v}}}`, String(value));
+		for (const v of Object.keys(vars)) {
+			const value = vars[v];
+			if (value !== undefined) {
+				text = text.replace(`{{${v}}}`, String(value));
+			}
 		}
 	}
 
