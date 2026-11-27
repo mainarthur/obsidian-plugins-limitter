@@ -9,7 +9,10 @@ export interface Quota {
 	pluginsCount: number;
 	limit: number;
 	remaining: number;
-	nextMilestone: number;
+	// Files counted toward the next slot (0..FILES_PER_SLOT - 1)
+	nextSlotProgress: number;
+	// Files still needed before a plugin can be installed again (0 while a slot is free)
+	filesToInstall: number;
 	limitReached: boolean;
 }
 
@@ -19,14 +22,20 @@ export function getQuota(app: App): Quota {
 	const pluginsCount = Object.keys(getManifests(app)).length;
 	const limit = BASE_LIMIT + Math.floor(filesCount / FILES_PER_SLOT);
 	const remaining = limit - pluginsCount;
-	const nextMilestone = FILES_PER_SLOT - (filesCount % FILES_PER_SLOT);
+	const nextSlotProgress = filesCount % FILES_PER_SLOT;
+	const limitReached = pluginsCount >= limit;
+	// Installing needs limit > pluginsCount, i.e. pluginsCount + 1 - BASE_LIMIT earned slots
+	const filesToInstall = limitReached
+		? (pluginsCount + 1 - BASE_LIMIT) * FILES_PER_SLOT - filesCount
+		: 0;
 
 	return {
 		filesCount,
 		pluginsCount,
 		limit,
 		remaining,
-		nextMilestone,
-		limitReached: pluginsCount >= limit,
+		nextSlotProgress,
+		filesToInstall,
+		limitReached,
 	};
 }
