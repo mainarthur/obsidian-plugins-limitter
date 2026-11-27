@@ -1,10 +1,14 @@
-import { Plugin, App } from 'obsidian';
+import { Plugin } from 'obsidian';
 import { ObsidianPluginsSettingTab } from './settings';
 import { t } from './i18n';
+import { getQuota } from './quota';
 
 export default class ObsidianPluginsLimitter extends Plugin {
+	private settingTab?: ObsidianPluginsSettingTab;
 
 	onload() {
+		this.settingTab = new ObsidianPluginsSettingTab(this.app, this);
+
 		// Run it initially after layout is ready
 		this.app.workspace.onLayoutReady(() => {
 			this.checkPluginsLimit();
@@ -15,7 +19,7 @@ export default class ObsidianPluginsLimitter extends Plugin {
 			window.setInterval(() => this.checkPluginsLimit(), 1000)
 		);
 
-		this.addSettingTab(new ObsidianPluginsSettingTab(this.app, this));
+		this.addSettingTab(this.settingTab);
 	}
 
 	onunload() {
@@ -42,11 +46,10 @@ export default class ObsidianPluginsLimitter extends Plugin {
 	}
 
 	checkPluginsLimit() {
-		const filesCount = this.app.vault.getFiles().length;
-		// Count all installed community plugins
-		const pluginsCount = Object.keys((this.app as App & { plugins?: { manifests?: Record<string, unknown> } }).plugins?.manifests || {}).length;
-		const limit = 5 + Math.floor(filesCount / 10);
-		const limitReached = pluginsCount >= limit;
+		const quota = getQuota(this.app);
+		const { limitReached } = quota;
+
+		this.settingTab?.refreshIfChanged(quota);
 
 		// Add a class for potential CSS styling
 		activeDocument.body.classList.toggle('obsidian-plugins-limit-reached', limitReached);
