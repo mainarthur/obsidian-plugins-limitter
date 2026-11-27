@@ -1,6 +1,7 @@
 import { App, PluginSettingTab, Setting, SettingDefinitionItem } from "obsidian";
 import ObsidianPluginsLimitter from "./main";
 import { t } from "./i18n";
+import { getQuota } from "./quota";
 
 export class ObsidianPluginsSettingTab extends PluginSettingTab {
 	plugin: ObsidianPluginsLimitter;
@@ -11,11 +12,7 @@ export class ObsidianPluginsSettingTab extends PluginSettingTab {
 	}
 
 	override getSettingDefinitions(): SettingDefinitionItem[] {
-		const filesCount = this.app.vault.getFiles().length;
-		const pluginsCount = Object.keys((this.app as App & { plugins?: { manifests?: Record<string, unknown> } }).plugins?.manifests || {}).length;
-		const limit = 5 + Math.floor(filesCount / 10);
-		const remaining = limit - pluginsCount;
-		const nextMilestone = 10 - (filesCount % 10);
+		const { filesCount, pluginsCount, limit, remaining, nextMilestone } = getQuota(this.app);
 
 		return [
 			{
