@@ -31,9 +31,9 @@ Your plugin limit is calculated using the following straightforward formula:
 ## Installation
 
 ### Manual Installation (Local Testing)
-1. Download the latest release from the [Releases](https://github.com/mainarthur/obsidian-focus-plugin/releases) page (if available), or build it from source.
+1. Download the latest release from the [Releases](https://github.com/mainarthur/obsidian-plugins-limitter/releases) page (if available), or build it from source.
 2. In your Obsidian vault, navigate to `.obsidian/plugins/`.
-3. Create a new folder named `obsidian-plugins-limitter`.
+3. Create a new folder named `plugins-limitter`.
 4. Copy the `main.js` and `manifest.json` files into this folder.
 5. Restart Obsidian or reload your plugins.
 6. Go to **Settings** → **Community plugins** and enable "Installation Limitter".
@@ -43,7 +43,7 @@ Your plugin limit is calculated using the following straightforward formula:
 2. Open a terminal in the cloned directory.
 3. Run `npm install` to install dependencies.
 4. Run `npm run build` to compile the plugin.
-5. Copy the generated `main.js` and `manifest.json` to your vault's `.obsidian/plugins/obsidian-plugins-limitter/` directory.
+5. Copy the generated `main.js` and `manifest.json` to your vault's `.obsidian/plugins/plugins-limitter/` directory.
 
 ## Usage
 Once installed and enabled, the plugin works entirely in the background. 
